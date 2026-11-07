@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="MUST online application portal frontend prototype.">
+
+    <title>Online Application | MUST</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="MUST application portal home">
+            <img
+                src="campus_logo.jpg"
+                alt="MUST university logo"
+                class="university-logo"
+            >
+            <span class="brand-text">
+                <strong>Mbarara University of Science and Technology</strong>
+                <small>Online Application Portal</small>
+            </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Application</a>
+            <a href="register.html">Register</a>
+            <a href="https://www.must.ac.ug/" target="_blank" rel="noopener noreferrer">
+                University Website
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="eyebrow">WELCOME TO MUST</span>
+
+                <h1>Begin Your Academic Journey</h1>
+
+                <p>
+                    Take the next step towards your future.
+                    Complete the application form below to get started.
+                </p>
+
+                <div class="hero-accent">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="application-title">
+            <div class="application-layout">
+
+                <aside class="information-panel">
+                    <span class="panel-label">ADMISSIONS</span>
+
+                    <h2>Your Future Starts Here</h2>
+
+                    <p>
+                        Welcome to the MUST online application experience.
+                        Provide accurate information when completing your
+                        application details.
+                    </p>
+
+                    <div class="info-divider"></div>
+
+                    <h3>Before you begin</h3>
+
+                    <ul class="check-list">
+                        <li>Use your correct full name.</li>
+                        <li>Provide an active email address.</li>
+                        <li>Choose the programme you intend to pursue.</li>
+                        <li>Review your details before submitting.</li>
+                    </ul>
+
+                    <div class="information-note">
+                        <strong>Need an account?</strong>
+                        <p>
+                            Create an applicant account through the
+                            registration page.
+                        </p>
+                        <a href="register.html">Register now →</a>
+                    </div>
+                </aside>
+
+                <section class="form-card">
+                    <div class="form-heading">
+                        <span class="section-label">APPLICATION FORM</span>
+                        <h2 id="application-title">Applicant Information</h2>
+                        <p>Enter your details in the fields below.</p>
+                    </div>
+
+                    <form id="application-form" novalidate>
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span>*</span></label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                minlength="3"
+                                maxlength="100"
+                                required
+                            >
+                            <small>Enter your name as it appears on your documents.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span>*</span></label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="example@email.com"
+                                autocomplete="email"
+                                maxlength="120"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="programme">Programme of Interest <span>*</span></label>
+                            <input
+                                type="text"
+                                id="programme"
+                                name="programme"
+                                placeholder="Enter your preferred programme"
+                                minlength="2"
+                                maxlength="120"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studyLevel">Study Level</label>
+                            <select id="studyLevel" name="studyLevel">
+                                <option value="">Select study level</option>
+                                <option value="Undergraduate">Undergraduate</option>
+                                <option value="Postgraduate">Postgraduate</option>
+                                <option value="Diploma">Diploma</option>
+                                <option value="Certificate">Certificate</option>
+                            </select>
+                        </div>
+
+                        <div class="form-check">
+                            <input
+                                type="checkbox"
+                                id="confirmDetails"
+                                name="confirmDetails"
+                                required
+                            >
+                            <label for="confirmDetails">
+                                I confirm that the information provided is accurate.
+                            </label>
+                        </div>
+
+                        <p
+                            class="form-message"
+                            id="application-message"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+
+                        <button type="submit" class="primary-button">
+                            Submit Application
+                            <span aria-hidden="true">→</span>
+                        </button>
+
+                        <p class="form-disclaimer">
+                            Frontend demonstration only. Application details
+                            are not transmitted to a university server.
+                        </p>
+                    </form>
+
+                    <div class="form-bottom">
+                        Already registered?
+                        <a href="register.html">Create or access your account</a>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>
+                <strong>Mbarara University of Science and Technology</strong>
+            </p>
+            <p>Online Application Portal</p>
+            <p class="copyright">
+                &copy; <span id="current-year"></span> MUST Portal.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
